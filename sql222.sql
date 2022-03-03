@@ -61,3 +61,12 @@ where id = 3
 
 
 
+
+UPDATE Class
+set age_Avg = (SELECT avg(age) from Students
+where class_Id = 3 )
+WHERE id=3
+
+
+
+
