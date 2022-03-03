@@ -79,4 +79,11 @@ where id=3
 
 
 
+UPDATE Class 
+SET MOST_POPULAR_CITY = 
+(SELECT ADDRESS_CITY from 
+(SELECT ADDRESS_CITY, max(noc) from 
+(SELECT *, ADDRESS_CITY, count(*) as noc from
+ Students group by ADDRESS_CITY 
+ having Students.Class_ID=Class.ID))) 
 
