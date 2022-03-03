@@ -52,3 +52,12 @@ where id =3
 
 
 
+
+UPDATE class
+set number_of_vip=
+(select count(vip) from Students where 
+vip = "YES" and class_Id=3)
+where id = 3
+
+
+
