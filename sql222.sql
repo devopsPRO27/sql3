@@ -33,4 +33,22 @@ VALUES
 ("green arrow",19,"telaviv","YES"),
 ("spiderman",69,"naura","no")
 
+INSERT INTO class (name,code)
+VALUES
+("devops",10),
+("aws",20),
+("java",30)
+
+
+
+
+
+UPDATE class
+set number_of_students=
+(SELECT count(class_Id) from Students
+where class_Id=3)
+where id =3 
+
+
+
 
