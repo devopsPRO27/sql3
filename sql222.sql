@@ -69,4 +69,14 @@ WHERE id=3
 
 
 
+UPDATE Class 
+set youngest_vip=(SELECT min(age) from Students
+where Vip = "YES" and class_Id=3)
+where id=3
+
+
+
+
+
+
 
